@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirillo Senior Living | Compassionate Assisted Living & Memory Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f4f8f6',
+                            100: '#e3ede8',
+                            200: '#c8dcd2',
+                            600: '#2c5e4a',
+                            700: '#234a3b',
+                            800: '#1b3a2e',
+                            gold: '#d4af37',
+                            sand: '#fdfbf7'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('WhatsApp Image 2026-10-02 at 5.27.10 PM.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Top Info Bar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-teal-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    T
+                </div>
+                <div>
+                    <span class="text-xl font-bold text-slate-900 tracking-tight block leading-none">Tirillo</span>
+                    <span class="text-xs text-teal-600 font-semibold uppercase tracking-wider">Senior Living</span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-teal-600 transition">About Us</a>
+                <a href="#care" class="hover:text-teal-600 transition">Care Options</a>
+                <a href="#assessment" class="hover:text-teal-600 transition">Care Assessment</a>
+                <a href="#plans" class="hover:text-teal-600 transition">Floor Plans</a>
+                <a href="#contact" class="hover:text-teal-600 transition">Contact Us</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#contact" class="bg-teal-600 hover:bg-teal-700 text-white font-medium px-5 py-2.5 rounded-xl shadow-sm transition">
+                    Request Online Tour
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative hero-bg text-white py-28 md:py-36 px-4">
+        <div class="max-w-7xl mx-auto text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="inline-block bg-teal-500/20 backdrop-blur-md border border-teal-400/30 text-teal-200 text-xs font-semibold uppercase px-4 py-1.5 rounded-full">
+                    Compassionate Care & Community
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    Empowering Independence, Enriching Lives.
+                </h1>
+                <p class="text-slate-200 text-lg md:text-xl font-light leading-relaxed">
+                    Experience personalized Assisted Living and specialized Memory Care designed to honor individuality, foster joy, and support peace of mind.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
+                    <a href="#contact" class="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-8 py-3.5 rounded-xl text-center shadow-lg transition transform hover:-translate-y-0.5">
+                        Get in Touch Online
+                    </a>
+                    <a href="#care" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-xl text-center backdrop-blur-md border border-white/20 transition">
+                        Explore Care Options
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Care Options Section -->
+    <section id="care" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Tailored Care Options</h2>
+                <p class="text-slate-600 mt-4 text-lg">Designed around individual needs, ensuring safety, dignity, and active daily engagement.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Assisted Living -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center font-bold text-xl mb-6">
+                        AL
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Assisted Living</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Ideal for seniors who cherish independence but require assistance with daily tasks such as medication management, mobility, and personal care.
+                    </p>
+                    <ul class="space-y-3 text-slate-700 mb-8">
+                        <li class="flex items-center"><span class="text-teal-600 mr-2">✓</span> 24/7 Professional Staff Support</li>
+                        <li class="flex items-center"><span class="text-teal-600 mr-2">✓</span> Personalized Care Plans & Assistance</li>
+                        <li class="flex items-center"><span class="text-teal-600 mr-2">✓</span> Daily Culinary & Dining Options</li>
+                        <li class="flex items-center"><span class="text-teal-600 mr-2">✓</span> Engaged Social & Wellness Activities</li>
+                    </ul>
+                    <a href="#contact" class="inline-block w-full text-center bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 rounded-xl transition">
+                        Inquire About Assisted Living
+                    </a>
+                </div>
+
+                <!-- Memory Care -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-xl flex items-center justify-center font-bold text-xl mb-6">
+                        MC
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Memory Care</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        A secure, therapeutic environment tailored specifically for individuals living with Alzheimer's, dementia, and other memory impairment conditions.
+                    </p>
+                    <ul class="space-y-3 text-slate-700 mb-8">
+                        <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Specialized Cognitive Programming</li>
+                        <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Secure, Comforting Environment</li>
+                        <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Specially Trained Compassionate Staff</li>
+                        <li class="flex items-center"><span class="text-indigo-600 mr-2">✓</span> Structured Daily Routine & Navigation Support</li>
+                    </ul>
+                    <a href="#contact" class="inline-block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 rounded-xl transition">
+                        Inquire About Memory Care
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment Tool -->
+    <section id="assessment" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Unsure Which Care Level is Right?</h2>
+            <p class="text-slate-300 text-lg mb-8">Complete our digital care assessment form online to receive tailored recommendations from our team.</p>
+            <a href="#contact" class="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-8 py-3.5 rounded-xl transition inline-block">
+                Start Online Assessment
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact & Online Inquiry Section (No Phone/Address) -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Connect With Us Online</h2>
+                <p class="text-slate-600 mt-4 text-lg">Send us a message or schedule an online video consultation with our team.</p>
+            </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100">
+                <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! We have received your inquiry and will contact you via email shortly.');" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Your Name</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition" placeholder="Full Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition" placeholder="name@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Interested Care Program</label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition">
+                            <option>Assisted Living</option>
+                            <option>Memory Care</option>
+                            <option>General Information</option>
+                            <option>Request Virtual Tour</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Message or Questions</label>
+                        <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition" placeholder="How can we assist you or your family?"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3.5 rounded-xl transition shadow-md">
+                        Submit Online Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:items-center">
+            <div class="mb-6 md:mb-0">
+                <span class="text-xl font-bold text-white tracking-tight">Tirillo Senior Living</span>
+                <p class="text-sm text-slate-400 mt-1">Dedicated to exceptional Assisted Living and Memory Care.</p>
+            </div>
+            <div class="text-sm">
+                <p>&copy; 2026 Tirillo Senior Living. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
