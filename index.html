@@ -3,33 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tirillo Senior Living | Vintage Sanctuary of Assisted Living & Memory Care</title>
+    <title>Tirillo Senior Living | Eccellenza Nel Vivere Senior</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        gothic: {
-                            bg: '#0c0b0a',
-                            panel: '#151311',
-                            card: '#1c1917',
-                            border: '#322a24',
-                            terracotta: '#63251e',
-                            cypress: '#1d2c23',
-                            moss: '#344335',
-                            gold: '#a38448',
-                            goldHover: '#c4a259',
-                            parchment: '#dfd5c6',
-                            muted: '#9e9285'
+                        riviera: {
+                            teal: '#008B8B',
+                            lightTeal: '#20B2AA',
+                            coral: '#FF6F61',
+                            sun: '#FFD700',
+                            sand: '#FDFBF7',
+                            terracotta: '#CC5500',
+                            darkIvory: '#F4EBE1'
                         }
                     },
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
-                        gothic: ['Cinzel Decorative', 'serif'],
-                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                        sans: ['Montserrat', 'sans-serif']
                     }
                 }
             }
@@ -37,447 +32,279 @@
     </script>
     <style>
         .hero-bg {
-            background-image: linear-gradient(180deg, rgba(12, 11, 10, 0.88) 0%, rgba(12, 11, 10, 0.75) 50%, rgba(12, 11, 10, 1) 100%), url('WhatsApp Image 2026-10-02 at 5.27.10 PM.jpeg');
+            background-image: linear-gradient(rgba(0, 51, 51, 0.75), rgba(0, 51, 51, 0.75)), url('WhatsApp Image 2026-10-02 at 5.27.10 PM.jpeg');
             background-size: cover;
             background-position: center;
         }
-        .vintage-border {
-            border: 1px solid #322a24;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.9);
+        .retro-border {
+            border: 4px solid #FF6F61;
+            box-shadow: 6px 6px 0px #008B8B;
         }
-        .parchment-glow {
-            text-shadow: 0 0 12px rgba(163, 132, 72, 0.3);
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0c0b0a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #322a24;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #63251e;
+        .retro-card {
+            box-shadow: 8px 8px 0px #FF6F61;
         }
     </style>
 </head>
-<body class="bg-gothic-bg text-gothic-parchment font-sans antialiased selection:bg-gothic-terracotta selection:text-white">
+<body class="bg-riviera-sand text-slate-800 font-sans antialiased">
 
-    <!-- Top Navigation Header -->
-    <header class="sticky top-0 z-50 bg-gothic-bg/95 backdrop-blur-md border-b border-gothic-border/60">
+    <!-- Top Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-4 border-riviera-coral shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
             <div class="flex items-center space-x-4">
-                <div class="w-12 h-12 bg-gothic-terracotta/40 border border-gothic-gold/50 rounded-lg flex items-center justify-center text-gothic-gold font-gothic text-2xl shadow-inner">
-                    T
-                </div>
+                <img src="logo.jfif" alt="Tirillo Senior Living Logo" class="w-16 h-16 rounded-full border-2 border-riviera-teal object-cover shadow-sm">
                 <div>
-                    <span class="text-2xl font-gothic tracking-wider text-gothic-gold block leading-none parchment-glow">Tirillo</span>
-                    <span class="text-xs font-serif italic text-gothic-muted tracking-widest block mt-1">Senior Living Sanctuary</span>
+                    <span class="text-2xl font-extrabold text-riviera-teal font-serif tracking-wide block leading-none">TIRILLO</span>
+                    <span class="text-xs text-riviera-coral font-bold uppercase tracking-widest">Eccellenza Nel Vivere Senior</span>
                 </div>
             </div>
 
             <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-serif tracking-wider text-gothic-parchment/80">
-                <a href="#about" class="hover:text-gothic-gold transition">Our Realm</a>
-                <a href="#care" class="hover:text-gothic-gold transition">Care Programs</a>
-                <a href="#activity-feed" class="hover:text-gothic-gold transition">Guest Dispatch</a>
-                <a href="#guestbook" class="hover:text-gothic-gold transition">Memorial Guestbook</a>
-                <a href="#contact" class="hover:text-gothic-gold transition">Digital Contact</a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-bold uppercase tracking-wider text-slate-700">
+                <a href="#about" class="hover:text-riviera-coral transition">Chi Siamo</a>
+                <a href="#care" class="hover:text-riviera-coral transition">Care Options</a>
+                <a href="#guestbook" class="hover:text-riviera-coral transition">Guestbook</a>
+                <a href="#activity-feed" class="hover:text-riviera-coral transition">Activities</a>
+                <a href="#contact" class="hover:text-riviera-coral transition">Contact Us</a>
             </nav>
 
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="#contact" class="border border-gothic-gold/60 text-gothic-gold hover:bg-gothic-gold hover:text-gothic-bg font-serif text-sm tracking-widest px-6 py-2.5 rounded transition duration-300">
-                    Inquire Online
+            <div class="hidden md:flex items-center">
+                <a href="#contact" class="bg-riviera-coral hover:bg-riviera-terracotta text-white font-bold px-6 py-3 rounded-full border-2 border-white shadow-md transition transform hover:scale-105">
+                    Online Inquiry
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative hero-bg text-gothic-parchment py-32 md:py-44 px-4 border-b border-gothic-border">
-        <div class="max-w-5xl mx-auto text-center space-y-8">
-            <div class="inline-block border border-gothic-gold/40 bg-gothic-bg/80 backdrop-blur-md px-6 py-2 rounded-full">
-                <span class="text-xs uppercase tracking-[0.3em] font-serif text-gothic-gold">Vintage Italian-Floridian Estate</span>
-            </div>
-            
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-normal tracking-tight text-slate-100 leading-tight">
-                Shadows, Solitude &amp; <span class="italic font-light text-gothic-gold">Serene Care.</span>
-            </h1>
-            
-            <p class="max-w-2xl mx-auto text-gothic-muted text-lg md:text-xl font-serif italic leading-relaxed">
-                An atmospheric sanctuary nestled in silent Floridian cypress woods. Offering devoted Assisted Living and Memory Care away from the bright modern noise.
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-5 pt-6 justify-center">
-                <a href="#care" class="bg-gothic-terracotta hover:bg-gothic-terracotta/80 text-gothic-parchment border border-gothic-gold/30 font-serif tracking-widest px-8 py-3.5 rounded shadow-2xl transition duration-300">
-                    Explore Care Options
-                </a>
-                <a href="#activity-feed" class="bg-gothic-panel hover:bg-gothic-card text-gothic-gold border border-gothic-border font-serif tracking-widest px-8 py-3.5 rounded transition duration-300">
-                    View Guest Dispatch
-                </a>
+    <section class="relative hero-bg text-white py-28 md:py-36 px-4 border-b-8 border-riviera-sun">
+        <div class="max-w-7xl mx-auto text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-riviera-coral text-white text-xs font-bold uppercase px-4 py-1.5 rounded-full shadow-md">
+                    <span>Est. 1983</span>
+                    <span>•</span>
+                    <span>La Bella Vita</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-serif italic tracking-tight leading-tight text-riviera-sun">
+                    "Eccellenza Nel Vivere Senior"
+                </h1>
+                <p class="text-slate-100 text-lg md:text-xl font-medium leading-relaxed">
+                    Celebrating high living, timeless dignity, and Italian Riviera warmth. Offering premier Assisted Living and Memory Care in an extraordinary setting.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
+                    <a href="#contact" class="bg-riviera-teal hover:bg-teal-700 text-white font-bold px-8 py-3.5 rounded-xl text-center shadow-lg transition border-2 border-white">
+                        Connect Online
+                    </a>
+                    <a href="#care" class="bg-white/20 hover:bg-white/30 text-white font-bold px-8 py-3.5 rounded-xl text-center backdrop-blur-md border border-white transition">
+                        Explore Programs
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Care Options Section -->
-    <section id="care" class="py-24 bg-gothic-panel border-b border-gothic-border">
+    <section id="care" class="py-20 bg-riviera-darkIvory">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="text-xs uppercase tracking-[0.4em] font-serif text-gothic-gold mb-3">Devoted Sanctuaries</h2>
-                <h3 class="text-3xl sm:text-4xl font-serif text-slate-200">Personalized Haven Programs</h3>
-                <div class="w-16 h-0.5 bg-gothic-gold/40 mx-auto mt-6"></div>
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-black font-serif text-riviera-teal tracking-tight uppercase">Care Options</h2>
+                <div class="w-24 h-1 bg-riviera-coral mx-auto my-4"></div>
+                <p class="text-slate-700 font-medium text-lg">Tailored living assistance and memory enrichment crafted with Mediterranean care.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-10">
-                <!-- Assisted Living Card -->
-                <div class="vintage-border bg-gothic-card p-10 rounded-lg relative overflow-hidden group hover:border-gothic-gold/50 transition duration-500">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-gothic-terracotta/10 rounded-bl-full pointer-events-none"></div>
-                    <div class="w-14 h-14 bg-gothic-bg border border-gothic-gold/40 text-gothic-gold rounded-full flex items-center justify-center font-serif text-xl mb-8">
-                        I
+                <!-- Assisted Living -->
+                <div class="bg-white border-4 border-riviera-teal rounded-2xl p-8 retro-card">
+                    <div class="w-14 h-14 bg-riviera-coral text-white rounded-full flex items-center justify-center font-black text-xl mb-6 shadow-md">
+                        AL
                     </div>
-                    <h4 class="text-2xl font-serif text-gothic-gold mb-4">Assisted Living Sanctuary</h4>
-                    <p class="text-gothic-muted font-serif italic mb-8 leading-relaxed">
-                        Thoughtful, discreet assistance provided within private arched suites. Embracing personal independence while quietly safeguarding daily wellness.
+                    <h3 class="text-2xl font-bold font-serif text-slate-900 mb-3">Assisted Living</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Full independence with complete peace of mind. Daily assistance tailored to personal comfort, medication schedules, and vibrant community living.
                     </p>
-                    <ul class="space-y-4 text-sm font-serif text-gothic-parchment/90 mb-10 border-t border-gothic-border/60 pt-6">
-                        <li class="flex items-center"><i class="fa-solid fa-moon text-gothic-gold mr-3"></i> 24-Hour Vigilant Care Staff</li>
-                        <li class="flex items-center"><i class="fa-solid fa-moon text-gothic-gold mr-3"></i> Medication & Wellness Stewardship</li>
-                        <li class="flex items-center"><i class="fa-solid fa-moon text-gothic-gold mr-3"></i> Rustic Italian Dining Experience</li>
-                        <li class="flex items-center"><i class="fa-solid fa-moon text-gothic-gold mr-3"></i> Private Courtyard & Garden Access</li>
+                    <ul class="space-y-3 text-slate-700 font-medium mb-8">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-riviera-teal mr-3"></i> 24/7 Dedicated Care Staff</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-riviera-teal mr-3"></i> Gourmet Mediterranean Culinary Dining</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-riviera-teal mr-3"></i> Personalized Wellness & Medication Support</li>
                     </ul>
-                    <a href="#contact" class="block text-center border border-gothic-border bg-gothic-bg hover:bg-gothic-terracotta hover:text-white text-gothic-parchment font-serif text-sm tracking-widest py-3 rounded transition duration-300">
-                        Inquire About Assisted Living
+                    <a href="#contact" class="inline-block w-full text-center bg-riviera-teal hover:bg-teal-800 text-white font-bold py-3.5 rounded-xl transition">
+                        Inquire Online
                     </a>
                 </div>
 
-                <!-- Memory Care Card -->
-                <div class="vintage-border bg-gothic-card p-10 rounded-lg relative overflow-hidden group hover:border-gothic-gold/50 transition duration-500">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-gothic-cypress/20 rounded-bl-full pointer-events-none"></div>
-                    <div class="w-14 h-14 bg-gothic-bg border border-gothic-gold/40 text-gothic-gold rounded-full flex items-center justify-center font-serif text-xl mb-8">
-                        II
+                <!-- Memory Care -->
+                <div class="bg-white border-4 border-riviera-coral rounded-2xl p-8 retro-card">
+                    <div class="w-14 h-14 bg-riviera-teal text-white rounded-full flex items-center justify-center font-black text-xl mb-6 shadow-md">
+                        MC
                     </div>
-                    <h4 class="text-2xl font-serif text-gothic-gold mb-4">Memory Care Courtyard</h4>
-                    <p class="text-gothic-muted font-serif italic mb-8 leading-relaxed">
-                        A secure, therapeutic sanctuary crafted for individuals traversing cognitive decline or Alzheimer's. Peaceful routines amidst nostalgic surroundings.
+                    <h3 class="text-2xl font-bold font-serif text-slate-900 mb-3">Memory Care</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        A specialized, secure sanctuary designed for guests navigating cognitive or memory changes, backed by compassionate daily routines.
                     </p>
-                    <ul class="space-y-4 text-sm font-serif text-gothic-parchment/90 mb-10 border-t border-gothic-border/60 pt-6">
-                        <li class="flex items-center"><i class="fa-solid fa-feather text-gothic-gold mr-3"></i> Specialized Sensory & Nostalgia Therapy</li>
-                        <li class="flex items-center"><i class="fa-solid fa-feather text-gothic-gold mr-3"></i> Enclosed Gothic Cloister Grounds</li>
-                        <li class="flex items-center"><i class="fa-solid fa-feather text-gothic-gold mr-3"></i> Specially Trained Compassionate Keepers</li>
-                        <li class="flex items-center"><i class="fa-solid fa-feather text-gothic-gold mr-3"></i> Calm Structure & Cognitive Guidance</li>
+                    <ul class="space-y-3 text-slate-700 font-medium mb-8">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-riviera-coral mr-3"></i> Structured Therapeutic Activities</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-riviera-coral mr-3"></i> Secure, Serene Riviera Atmosphere</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-riviera-coral mr-3"></i> Specialized Cognitive Support Team</li>
                     </ul>
-                    <a href="#contact" class="block text-center border border-gothic-border bg-gothic-bg hover:bg-gothic-cypress hover:text-white text-gothic-parchment font-serif text-sm tracking-widest py-3 rounded transition duration-300">
-                        Inquire About Memory Care
+                    <a href="#contact" class="inline-block w-full text-center bg-riviera-coral hover:bg-riviera-terracotta text-white font-bold py-3.5 rounded-xl transition">
+                        Inquire Online
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Guest Activity Feed Section -->
-    <section id="activity-feed" class="py-24 bg-gothic-bg border-b border-gothic-border">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs uppercase tracking-[0.4em] font-serif text-gothic-gold mb-3">Life at the Villa</h2>
-                <h3 class="text-3xl sm:text-4xl font-serif text-slate-200">Guest Dispatch & Activity Gallery</h3>
-                <p class="text-gothic-muted font-serif italic mt-3">Share photos or memories of what our residents and guests are experiencing within the estate grounds.</p>
+    <!-- Guest Activity Upload & Feed Section -->
+    <section id="activity-feed" class="py-20 bg-white border-t-4 border-riviera-coral">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-riviera-teal">Guest Activities & Life at Tirillo</h2>
+                <p class="text-slate-600 mt-2 font-medium">Share moments and see what our wonderful residents are up to!</p>
             </div>
 
-            <!-- Upload Activity Form -->
-            <div class="max-w-2xl mx-auto mb-20 vintage-border bg-gothic-panel p-8 rounded-lg">
-                <h4 class="text-xl font-serif text-gothic-gold mb-6 border-b border-gothic-border pb-3 flex items-center">
-                    <i class="fa-solid fa-camera-retro mr-3 text-gothic-gold"></i> Post Guest Activity / Dispatch
-                </h4>
-                <form id="activityForm" onsubmit="handleActivitySubmit(event)" class="space-y-5">
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-gothic-muted mb-2 font-serif">Guest / Resident Name</label>
-                        <input type="text" id="guestName" required class="w-full bg-gothic-bg border border-gothic-border rounded p-3 text-gothic-parchment focus:border-gothic-gold outline-none font-serif text-sm" placeholder="e.g., Lord Joseph or Guest Member">
+            <!-- Upload Box -->
+            <div class="bg-riviera-sand p-6 rounded-2xl border-2 border-riviera-teal shadow-md mb-12">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center">
+                    <i class="fa-solid fa-camera text-riviera-coral mr-2"></i> Share a Photo or Story
+                </h3>
+                <form id="activity-form" class="space-y-4" onsubmit="handlePostSubmit(event)">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" id="post-author" placeholder="Your Name or Family Member Name" required class="w-full p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-riviera-teal">
+                        <input type="file" id="post-image" accept="image/*" class="w-full p-2 bg-white rounded-lg border border-slate-300 text-sm text-slate-600">
                     </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-gothic-muted mb-2 font-serif">Activity Caption or Note</label>
-                        <textarea id="activityCaption" rows="3" required class="w-full bg-gothic-bg border border-gothic-border rounded p-3 text-gothic-parchment focus:border-gothic-gold outline-none font-serif text-sm" placeholder="Describe what our guest is up to in the villa..."></textarea>
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-gothic-muted mb-2 font-serif">Photo Attachment (Upload File or URL)</label>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="file" id="activityFile" accept="image/*" onchange="previewFileImage(event)" class="text-xs text-gothic-muted file:mr-4 file:py-2 file:px-4 file:rounded file:border file:border-gothic-border file:bg-gothic-bg file:text-gothic-gold hover:file:bg-gothic-card font-serif cursor-pointer">
-                            <input type="url" id="activityUrl" class="w-full bg-gothic-bg border border-gothic-border rounded p-2.5 text-gothic-parchment focus:border-gothic-gold outline-none font-serif text-xs" placeholder="Or enter image URL...">
-                        </div>
-                    </div>
-                    
-                    <!-- Preview Box -->
-                    <div id="imagePreviewContainer" class="hidden text-center p-3 border border-dashed border-gothic-border rounded">
-                        <span class="text-xs text-gothic-muted block mb-2">Image Preview</span>
-                        <img id="imagePreview" src="" alt="Preview" class="max-h-48 mx-auto rounded border border-gothic-border">
-                    </div>
-
-                    <button type="submit" class="w-full bg-gothic-terracotta hover:bg-gothic-terracotta/80 text-gothic-parchment border border-gothic-gold/30 font-serif text-sm tracking-widest py-3 rounded transition duration-300">
-                        Publish Activity Dispatch
+                    <textarea id="post-text" rows="3" placeholder="Describe what's happening or write a update..." required class="w-full p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-riviera-teal"></textarea>
+                    <button type="submit" class="bg-riviera-teal hover:bg-teal-700 text-white font-bold px-6 py-2.5 rounded-lg transition shadow-sm">
+                        Post Activity Update
                     </button>
                 </form>
             </div>
 
             <!-- Feed Container -->
-            <div id="activityFeedContainer" class="grid md:grid-cols-3 gap-8">
-                <!-- Pre-populated Card 1 -->
-                <div class="vintage-border bg-gothic-card rounded overflow-hidden flex flex-col">
-                    <div class="h-64 bg-gothic-bg overflow-hidden relative border-b border-gothic-border">
-                        <img src="WhatsApp Image 2026-10-02 at 5.27.10 PM.jpeg" alt="Resident hallway" class="w-full h-full object-cover filter contrast-125 sepia-[0.3] brightness-90">
-                        <div class="absolute bottom-2 left-2 bg-gothic-bg/90 border border-gothic-border px-3 py-1 rounded text-[10px] text-gothic-gold font-serif">
-                            Suite 214 Wing
+            <div id="posts-container" class="grid md:grid-cols-2 gap-6">
+                <!-- Example Post 1 -->
+                <div class="bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-riviera-sun rounded-full flex items-center justify-center font-bold text-slate-800">T</div>
+                        <div>
+                            <p class="font-bold text-slate-900 leading-tight">Tirillo Community Team</p>
+                            <p class="text-xs text-slate-500">October 2, 2026</p>
                         </div>
                     </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <p class="text-gothic-parchment font-serif italic text-sm leading-relaxed mb-4">
-                            "A quiet morning stroll down the upper hallway cloister with his signature Superman blanket keeping warm."
-                        </p>
-                        <div class="border-t border-gothic-border/60 pt-4 flex justify-between items-center text-xs text-gothic-muted font-serif">
-                            <span>Resident Member</span>
-                            <span class="text-gothic-gold">Today</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pre-populated Card 2 -->
-                <div class="vintage-border bg-gothic-card rounded overflow-hidden flex flex-col">
-                    <div class="h-64 bg-gothic-bg overflow-hidden relative border-b border-gothic-border flex items-center justify-center p-4">
-                        <i class="fa-solid fa-chess-king text-6xl text-gothic-gold/40"></i>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <p class="text-gothic-parchment font-serif italic text-sm leading-relaxed mb-4">
-                            "An evening of strategy and dark espresso during our weekly fireside Italian chess tournament."
-                        </p>
-                        <div class="border-t border-gothic-border/60 pt-4 flex justify-between items-center text-xs text-gothic-muted font-serif">
-                            <span>Assisted Living Lounge</span>
-                            <span class="text-gothic-gold">Yesterday</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pre-populated Card 3 -->
-                <div class="vintage-border bg-gothic-card rounded overflow-hidden flex flex-col">
-                    <div class="h-64 bg-gothic-bg overflow-hidden relative border-b border-gothic-border flex items-center justify-center p-4">
-                        <i class="fa-solid fa-tree-city text-6xl text-gothic-cypress/60"></i>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <p class="text-gothic-parchment font-serif italic text-sm leading-relaxed mb-4">
-                            "Quiet solitude among the cypress pines in the Memory Care inner courtyard terrace."
-                        </p>
-                        <div class="border-t border-gothic-border/60 pt-4 flex justify-between items-center text-xs text-gothic-muted font-serif">
-                            <span>Courtyard Keep</span>
-                            <span class="text-gothic-gold">2 days ago</span>
-                        </div>
-                    </div>
+                    <p class="text-slate-700 text-sm">Afternoon lounge activities and catching up in the hallway!</p>
+                    <img src="WhatsApp Image 2026-10-02 at 5.27.10 PM.jpeg" alt="Resident" class="w-full h-64 object-cover rounded-xl">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Guestbook / Memorial Comment Wall Section -->
-    <section id="guestbook" class="py-24 bg-gothic-panel border-b border-gothic-border">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs uppercase tracking-[0.4em] font-serif text-gothic-gold mb-3">Tributes &amp; Messages</h2>
-                <h3 class="text-3xl sm:text-4xl font-serif text-slate-200">The Visitor's Guestbook</h3>
-                <p class="text-gothic-muted font-serif italic mt-3">Leave a reflection, note of affection, or message for our residents and caregivers.</p>
+    <!-- Guestbook / Comment Wall Section -->
+    <section id="guestbook" class="py-20 bg-riviera-darkIvory border-t-4 border-riviera-teal">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-riviera-coral">Guestbook & Words of Encouragement</h2>
+                <p class="text-slate-600 mt-2 font-medium">Leave a message for our residents, staff, or community!</p>
             </div>
 
-            <!-- Comment Input Box -->
-            <div class="vintage-border bg-gothic-card p-8 rounded-lg mb-16">
-                <form id="guestbookForm" onsubmit="handleCommentSubmit(event)" class="space-y-5">
-                    <div class="grid md:grid-cols-2 gap-5">
-                        <div>
-                            <label class="block text-xs uppercase tracking-wider text-gothic-muted mb-2 font-serif">Your Name</label>
-                            <input type="text" id="commenterName" required class="w-full bg-gothic-bg border border-gothic-border rounded p-3 text-gothic-parchment focus:border-gothic-gold outline-none font-serif text-sm" placeholder="e.g. Maria Tirillo">
-                        </div>
-                        <div>
-                            <label class="block text-xs uppercase tracking-wider text-gothic-muted mb-2 font-serif">Relation / Visitor Status</label>
-                            <input type="text" id="commenterRelation" required class="w-full bg-gothic-bg border border-gothic-border rounded p-3 text-gothic-parchment focus:border-gothic-gold outline-none font-serif text-sm" placeholder="e.g. Daughter / Visiting Guest">
-                        </div>
+            <div class="bg-white p-6 rounded-2xl border-2 border-riviera-coral shadow-md mb-8">
+                <form id="comment-form" class="space-y-4" onsubmit="handleCommentSubmit(event)">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" id="comment-author" placeholder="Your Name" required class="w-full p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-riviera-coral">
+                        <input type="text" id="comment-relation" placeholder="Relation (e.g. Visitor, Family, Friend)" class="w-full p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-riviera-coral">
                     </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-gothic-muted mb-2 font-serif">Your Message or Tribute</label>
-                        <textarea id="commentText" rows="4" required class="w-full bg-gothic-bg border border-gothic-border rounded p-3 text-gothic-parchment focus:border-gothic-gold outline-none font-serif text-sm" placeholder="Inscribe your reflection or message..."></textarea>
-                    </div>
-                    <button type="submit" class="bg-gothic-gold hover:bg-gothic-goldHover text-gothic-bg font-serif text-sm font-semibold tracking-widest px-8 py-3.5 rounded transition duration-300">
-                        Sign Guestbook
+                    <textarea id="comment-body" rows="3" placeholder="Write your comment or note here..." required class="w-full p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-riviera-coral"></textarea>
+                    <button type="submit" class="bg-riviera-coral hover:bg-riviera-terracotta text-white font-bold px-6 py-2.5 rounded-lg transition shadow-sm">
+                        Leave Comment
                     </button>
                 </form>
             </div>
 
-            <!-- Comment Wall List -->
-            <div id="commentsWall" class="space-y-6">
-                <!-- Pre-populated Comment 1 -->
-                <div class="vintage-border bg-gothic-card p-6 rounded relative">
-                    <div class="flex justify-between items-start mb-3 border-b border-gothic-border/60 pb-3">
-                        <div>
-                            <h5 class="text-gothic-gold font-serif text-base">Eleanor Vance</h5>
-                            <span class="text-xs text-gothic-muted font-serif italic">Granddaughter of Resident</span>
-                        </div>
-                        <span class="text-xs text-gothic-muted font-serif">October 2026</span>
+            <div id="comments-list" class="space-y-4">
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-bold text-slate-800">Maria Rossi <span class="text-xs text-riviera-teal font-normal">(Family Member)</span></span>
+                        <span class="text-xs text-slate-400">October 2, 2026</span>
                     </div>
-                    <p class="text-gothic-parchment font-serif italic text-sm leading-relaxed">
-                        "Visiting Tirillo felt like stepping into an Italian villa of quiet peacefulness. Thank you to the caregivers for taking such devoted care of my grandfather in the Memory Care courtyard."
-                    </p>
-                </div>
-
-                <!-- Pre-populated Comment 2 -->
-                <div class="vintage-border bg-gothic-card p-6 rounded relative">
-                    <div class="flex justify-between items-start mb-3 border-b border-gothic-border/60 pb-3">
-                        <div>
-                            <h5 class="text-gothic-gold font-serif text-base">Dr. Julian Croft</h5>
-                            <span class="text-xs text-gothic-muted font-serif italic">Visiting Family Member</span>
-                        </div>
-                        <span class="text-xs text-gothic-muted font-serif">September 2026</span>
-                    </div>
-                    <p class="text-gothic-parchment font-serif italic text-sm leading-relaxed">
-                        "The gothic tranquility and quiet hallways offer a serene atmosphere unlike any standard community. A true sanctuary."
-                    </p>
+                    <p class="text-slate-600 text-sm">Sending warmth and love to everyone at Tirillo! Such a wonderful atmosphere.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Digital Contact Form Section -->
-    <section id="contact" class="py-24 bg-gothic-bg">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-xs uppercase tracking-[0.4em] font-serif text-gothic-gold mb-3">Silent Dispatch</h2>
-                <h3 class="text-3xl sm:text-4xl font-serif text-slate-200">Digital Contact &amp; Inquiry</h3>
-                <p class="text-gothic-muted font-serif italic mt-3">Send a direct confidential message to our administration team online.</p>
+    <!-- Online Contact Form -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold font-serif text-slate-900">Get in Touch Online</h2>
+                <p class="text-slate-600 mt-2">Send us a direct message and our team will get back to you by email.</p>
             </div>
-
-            <div class="vintage-border bg-gothic-panel p-8 md:p-12 rounded-lg">
-                <form onsubmit="event.preventDefault(); alert('Your message has been inscribed into our digital logs. Our admissions team will correspond via email shortly.');" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs uppercase tracking-wider text-gothic-muted mb-2 font-serif">Full Name</label>
-                            <input type="text" required class="w-full bg-gothic-bg border border-gothic-border rounded p-3 text-gothic-parchment focus:border-gothic-gold outline-none font-serif text-sm">
-                        </div>
-                        <div>
-                            <label class="block text-xs uppercase tracking-wider text-gothic-muted mb-2 font-serif">Email Address</label>
-                            <input type="email" required class="w-full bg-gothic-bg border border-gothic-border rounded p-3 text-gothic-parchment focus:border-gothic-gold outline-none font-serif text-sm">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-gothic-muted mb-2 font-serif">Program Interest</label>
-                        <select class="w-full bg-gothic-bg border border-gothic-border rounded p-3 text-gothic-parchment focus:border-gothic-gold outline-none font-serif text-sm">
-                            <option>Assisted Living Sanctuary</option>
-                            <option>Memory Care Courtyard</option>
-                            <option>Virtual Consultation Request</option>
-                            <option>General Family Inquiry</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-gothic-muted mb-2 font-serif">Inquiry Details</label>
-                        <textarea rows="4" required class="w-full bg-gothic-bg border border-gothic-border rounded p-3 text-gothic-parchment focus:border-gothic-gold outline-none font-serif text-sm" placeholder="Write your inquiry or family care needs..."></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-gothic-terracotta hover:bg-gothic-terracotta/80 text-gothic-parchment border border-gothic-gold/30 font-serif text-sm tracking-widest py-4 rounded transition duration-300">
-                        Transmit Online Inquiry
-                    </button>
-                </form>
-            </div>
+            <form onsubmit="event.preventDefault(); alert('Grazie! Your message has been received.');" class="space-y-4 bg-riviera-sand p-8 rounded-2xl border-2 border-slate-200">
+                <input type="text" placeholder="Full Name" required class="w-full p-3 rounded-lg border border-slate-300">
+                <input type="email" placeholder="Email Address" required class="w-full p-3 rounded-lg border border-slate-300">
+                <textarea rows="4" placeholder="Your message or inquiry..." required class="w-full p-3 rounded-lg border border-slate-300"></textarea>
+                <button type="submit" class="w-full bg-riviera-teal text-white font-bold py-3 rounded-lg hover:bg-teal-800 transition">
+                    Send Online Inquiry
+                </button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gothic-bg text-gothic-muted py-12 border-t border-gothic-border">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:items-center font-serif text-sm">
-            <div class="mb-4 md:mb-0">
-                <span class="text-gothic-gold text-lg tracking-widest font-gothic block">Tirillo Senior Living</span>
-                <span class="text-xs italic text-gothic-muted">Assisted Living &amp; Memory Care Sanctuary</span>
-            </div>
-            <div>
-                <p>&copy; 2026 Tirillo Senior Living. All rights reserved.</p>
-            </div>
+    <footer class="bg-slate-900 text-white py-10 border-t-8 border-riviera-coral text-center">
+        <div class="max-w-7xl mx-auto px-4 space-y-3">
+            <p class="font-serif italic text-lg text-riviera-sun">"Eccellenza Nel Vivere Senior"</p>
+            <p class="text-sm text-slate-400">&copy; 2026 Tirillo Senior Living. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        let previewDataUrl = "";
-
-        // Preview file image
-        function previewFileImage(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    previewDataUrl = e.target.result;
-                    document.getElementById('imagePreview').src = previewDataUrl;
-                    document.getElementById('imagePreviewContainer').classList.remove('hidden');
-                }
-                reader.readAsDataURL(file);
-            }
-        }
-
-        // Handle Guest Activity submission
-        function handleActivitySubmit(event) {
-            event.preventDefault();
-            const name = document.getElementById('guestName').value;
-            const caption = document.getElementById('activityCaption').value;
-            const urlInput = document.getElementById('activityUrl').value;
-
-            let finalImgSrc = previewDataUrl || urlInput || 'WhatsApp Image 2026-10-02 at 5.27.10 PM.jpeg';
-
-            const feedContainer = document.getElementById('activityFeedContainer');
+        function handlePostSubmit(e) {
+            e.preventDefault();
+            const author = document.getElementById('post-author').value;
+            const text = document.getElementById('post-text').value;
+            const imageInput = document.getElementById('post-image');
             
-            const newCard = document.createElement('div');
-            newCard.className = "vintage-border bg-gothic-card rounded overflow-hidden flex flex-col transition duration-500 transform hover:-translate-y-1";
-            newCard.innerHTML = `
-                <div class="h-64 bg-gothic-bg overflow-hidden relative border-b border-gothic-border">
-                    <img src="${finalImgSrc}" alt="Activity photo" class="w-full h-full object-cover filter contrast-125 sepia-[0.2]">
-                    <div class="absolute bottom-2 left-2 bg-gothic-bg/90 border border-gothic-border px-3 py-1 rounded text-[10px] text-gothic-gold font-serif">
-                        New Dispatch
+            const postCard = document.createElement('div');
+            postCard.className = "bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3";
+            
+            let imgHTML = '';
+            if (imageInput.files && imageInput.files[0]) {
+                const imgURL = URL.createObjectURL(imageInput.files[0]);
+                imgHTML = `<img src="${imgURL}" class="w-full h-64 object-cover rounded-xl">`;
+            }
+
+            postCard.innerHTML = `
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-riviera-coral text-white rounded-full flex items-center justify-center font-bold">${author.charAt(0)}</div>
+                    <div>
+                        <p class="font-bold text-slate-900 leading-tight">${author}</p>
+                        <p class="text-xs text-slate-500">Just now</p>
                     </div>
                 </div>
-                <div class="p-6 flex-1 flex flex-col justify-between">
-                    <p class="text-gothic-parchment font-serif italic text-sm leading-relaxed mb-4">
-                        "${caption}"
-                    </p>
-                    <div class="border-t border-gothic-border/60 pt-4 flex justify-between items-center text-xs text-gothic-muted font-serif">
-                        <span>${name}</span>
-                        <span class="text-gothic-gold">Just now</span>
-                    </div>
-                </div>
+                <p class="text-slate-700 text-sm">${text}</p>
+                ${imgHTML}
             `;
 
-            feedContainer.prepend(newCard);
-
-            // Reset form
-            document.getElementById('activityForm').reset();
-            document.getElementById('imagePreviewContainer').classList.add('hidden');
-            previewDataUrl = "";
-            alert("Guest dispatch successfully published to the live stream!");
+            document.getElementById('posts-container').prepend(postCard);
+            document.getElementById('activity-form').reset();
         }
 
-        // Handle Guestbook comment submission
-        function handleCommentSubmit(event) {
-            event.preventDefault();
-            const name = document.getElementById('commenterName').value;
-            const relation = document.getElementById('commenterRelation').value;
-            const message = document.getElementById('commentText').value;
+        function handleCommentSubmit(e) {
+            e.preventDefault();
+            const author = document.getElementById('comment-author').value;
+            const relation = document.getElementById('comment-relation').value;
+            const body = document.getElementById('comment-body').value;
 
-            const wall = document.getElementById('commentsWall');
-            const newComment = document.createElement('div');
-            newComment.className = "vintage-border bg-gothic-card p-6 rounded relative";
-            newComment.innerHTML = `
-                <div class="flex justify-between items-start mb-3 border-b border-gothic-border/60 pb-3">
-                    <div>
-                        <h5 class="text-gothic-gold font-serif text-base">${name}</h5>
-                        <span class="text-xs text-gothic-muted font-serif italic">${relation}</span>
-                    </div>
-                    <span class="text-xs text-gothic-gold font-serif">Just now</span>
+            const commentCard = document.createElement('div');
+            commentCard.className = "bg-white p-4 rounded-xl border border-slate-200 shadow-sm";
+            commentCard.innerHTML = `
+                <div class="flex justify-between items-center mb-1">
+                    <span class="font-bold text-slate-800">${author} ${relation ? `<span class="text-xs text-riviera-teal font-normal">(${relation})</span>` : ''}</span>
+                    <span class="text-xs text-slate-400">Just now</span>
                 </div>
-                <p class="text-gothic-parchment font-serif italic text-sm leading-relaxed">
-                    "${message}"
-                </p>
+                <p class="text-slate-600 text-sm">${body}</p>
             `;
 
-            wall.prepend(newComment);
-            document.getElementById('guestbookForm').reset();
-            alert("Your reflection has been inscribed into the visitor guestbook!");
+            document.getElementById('comments-list').prepend(commentCard);
+            document.getElementById('comment-form').reset();
         }
     </script>
 </body>
