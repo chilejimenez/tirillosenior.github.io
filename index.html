@@ -24,6 +24,9 @@
     <link rel="icon" type="image/jpeg" href="logo.jfif">
     <link rel="apple-touch-icon" href="logo.jfif">
 
+    <!-- Supabase JS Client Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -253,13 +256,7 @@
             </div>
 
             <div id="comments-list" class="space-y-4">
-                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-                    <div class="flex justify-between items-center mb-1">
-                        <span class="font-bold text-slate-800">Maria Rossi <span class="text-xs text-riviera-teal font-normal">(Family Member)</span></span>
-                        <span class="text-xs text-slate-400">October 2, 2026</span>
-                    </div>
-                    <p class="text-slate-600 text-sm">Sending warmth and love to everyone at Tirillo! Such a wonderful atmosphere.</p>
-                </div>
+                <p class="text-slate-500 text-sm text-center py-4">Loading comments...</p>
             </div>
         </div>
     </section>
@@ -290,26 +287,94 @@
         </div>
     </footer>
 
+    <!-- Supabase Integration Script -->
     <script>
-        function handleCommentSubmit(e) {
-            e.preventDefault();
-            const author = document.getElementById('comment-author').value;
-            const relation = document.getElementById('comment-relation').value;
-            const body = document.getElementById('comment-body').value;
+        // REPLACE THESE TWO STRINGS WITH YOUR KEYS
+        const SUPABASE_URL = 'https://illtdgbzfwxrykaqhqxd.supabase.co/rest/v1/';
+        const SUPABASE_ANON_KEY = 'sb_publishable_JuxkYJlGKmUwfk9rwA_sOg_1eWubqPp';
 
-            const commentCard = document.createElement('div');
-            commentCard.className = "bg-white p-4 rounded-xl border border-slate-200 shadow-sm";
-            commentCard.innerHTML = `
-                <div class="flex justify-between items-center mb-1">
-                    <span class="font-bold text-slate-800">${author} ${relation ? `<span class="text-xs text-riviera-teal font-normal">(${relation})</span>` : ''}</span>
-                    <span class="text-xs text-slate-400">Just now</span>
-                </div>
-                <p class="text-slate-600 text-sm">${body}</p>
-            `;
+        const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-            document.getElementById('comments-list').prepend(commentCard);
-            document.getElementById('comment-form').reset();
+        // Fetch and display comments on load
+        async function loadComments() {
+            const commentsList = document.getElementById('comments-list');
+
+            const { data: comments, error } = await supabaseClient
+                .from('comments')
+                .select('*')
+                .order('created_at', { ascending: false });
+
+            if (error) {
+                console.error('Error loading comments:', error);
+                commentsList.innerHTML = `<p class="text-red-500 text-sm text-center py-4">Unable to load guestbook messages right now.</p>`;
+                return;
+            }
+
+            commentsList.innerHTML = '';
+
+            if (comments.length === 0) {
+                commentsList.innerHTML = `<p class="text-slate-500 text-sm text-center py-4">No notes yet. Be the first to leave a message!</p>`;
+                return;
+            }
+
+            comments.forEach(comment => {
+                const commentCard = document.createElement('div');
+                commentCard.className = "bg-white p-4 rounded-xl border border-slate-200 shadow-sm";
+                
+                const dateStr = comment.created_at ? new Date(comment.created_at).toLocaleDateString() : 'Recently';
+
+                commentCard.innerHTML = `
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-bold text-slate-800">${escapeHtml(comment.author)} ${comment.relation ? `<span class="text-xs text-riviera-teal font-normal">(${escapeHtml(comment.relation)})</span>` : ''}</span>
+                        <span class="text-xs text-slate-400">${dateStr}</span>
+                    </div>
+                    <p class="text-slate-600 text-sm">${escapeHtml(comment.body)}</p>
+                `;
+                commentsList.appendChild(commentCard);
+            });
         }
+
+        // Submit new comment
+        async function handleCommentSubmit(e) {
+            e.preventDefault();
+            
+            const authorInput = document.getElementById('comment-author');
+            const relationInput = document.getElementById('comment-relation');
+            const bodyInput = document.getElementById('comment-body');
+
+            const author = authorInput.value.trim();
+            const relation = relationInput.value.trim();
+            const body = bodyInput.value.trim();
+
+            if (!author || !body) return;
+
+            const { error } = await supabaseClient
+                .from('comments')
+                .insert([{ author, relation, body }]);
+
+            if (error) {
+                alert('There was an error posting your message. Please try again.');
+                console.error('Supabase Insert Error:', error);
+            } else {
+                document.getElementById('comment-form').reset();
+                loadComments();
+            }
+        }
+
+        // Security escaping helper
+        function escapeHtml(str) {
+            return str ? str.replace(/[&<>"']/g, function(m) {
+                return {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;'
+                }[m];
+            }) : '';
+        }
+
+        document.addEventListener('DOMContentLoaded', loadComments);
     </script>
 </body>
 </html>
