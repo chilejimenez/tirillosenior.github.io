@@ -153,34 +153,47 @@
         </div>
     </section>
 
-    <!-- Guest Activity Upload & Feed Section -->
+    <!-- Guest Activity Feed Section -->
     <section id="activity-feed" class="py-20 bg-white border-t-4 border-riviera-coral">
         <div class="max-w-5xl mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-riviera-teal">Guest Activities & Life at Tirillo</h2>
-                <p class="text-slate-600 mt-2 font-medium">Share moments and see what our wonderful residents are up to!</p>
-            </div>
-
-            <!-- Upload Box -->
-            <div class="bg-riviera-sand p-6 rounded-2xl border-2 border-riviera-teal shadow-md mb-12">
-                <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center">
-                    <i class="fa-solid fa-camera text-riviera-coral mr-2"></i> Share a Photo or Story
-                </h3>
-                <form id="activity-form" class="space-y-4" onsubmit="handlePostSubmit(event)">
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <input type="text" id="post-author" placeholder="Your Name or Family Member Name" required class="w-full p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-riviera-teal">
-                        <input type="file" id="post-image" accept="image/*" class="w-full p-2 bg-white rounded-lg border border-slate-300 text-sm text-slate-600">
-                    </div>
-                    <textarea id="post-text" rows="3" placeholder="Describe what's happening or write a update..." required class="w-full p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-riviera-teal"></textarea>
-                    <button type="submit" class="bg-riviera-teal hover:bg-teal-700 text-white font-bold px-6 py-2.5 rounded-lg transition shadow-sm">
-                        Post Activity Update
-                    </button>
-                </form>
+                <p class="text-slate-600 mt-2 font-medium">See what our wonderful residents are up to!</p>
             </div>
 
             <!-- Feed Container -->
-            <div id="posts-container" class="grid md:grid-cols-2 gap-6">
-                <!-- Example Post 1 -->
+            <div id="posts-container" class="grid md:grid-cols-2 gap-6 items-start">
+                <!-- Post 1: Dallas Cowboys / NFL Season Start -->
+                <div class="bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-riviera-teal text-white rounded-full flex items-center justify-center font-bold">T</div>
+                        <div>
+                            <p class="font-bold text-slate-900 leading-tight">Tirillo Community Team</p>
+                            <p class="text-xs text-slate-500">October 2, 2026</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-700 text-sm">Kickoff is here! 🏈 Loving the start of the 2026 NFL season and showing big love for America's Team — go Dallas Cowboys! ⭐💙</p>
+                    <div class="w-full bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
+                        <img src="Gemini_Generated_Image_q3aqmhq3aqmhq3aq.jfif" alt="Residents cheering for the Dallas Cowboys and celebrating the 2026 NFL season start" class="w-full max-h-[500px] object-contain rounded-xl">
+                    </div>
+                </div>
+
+                <!-- Post 2: Halloween Prep -->
+                <div class="bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-riviera-coral text-white rounded-full flex items-center justify-center font-bold">T</div>
+                        <div>
+                            <p class="font-bold text-slate-900 leading-tight">Tirillo Community Team</p>
+                            <p class="text-xs text-slate-500">October 2, 2026</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-700 text-sm">Getting an early start on our Halloween costume prep! Spooky, safe, and ready for trick-or-treating! 🎃👻</p>
+                    <div class="w-full bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
+                        <img src="WhatsApp Image 2026-10-02 at 7.09.59 PM.jpeg" alt="Resident preparing for Halloween costume" class="w-full max-h-[500px] object-contain rounded-xl">
+                    </div>
+                </div>
+
+                <!-- Post 3: Lounge Activities -->
                 <div class="bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3">
                     <div class="flex items-center space-x-3">
                         <div class="w-10 h-10 bg-riviera-sun rounded-full flex items-center justify-center font-bold text-slate-800">T</div>
@@ -190,7 +203,9 @@
                         </div>
                     </div>
                     <p class="text-slate-700 text-sm">Afternoon lounge activities and catching up in the hallway!</p>
-                    <img src="WhatsApp Image 2026-10-02 at 5.27.10 PM.jpeg" alt="Resident" class="w-full h-64 object-cover rounded-xl">
+                    <div class="w-full bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
+                        <img src="WhatsApp Image 2026-10-02 at 5.27.10 PM.jpeg" alt="Resident" class="w-full max-h-[500px] object-contain rounded-xl">
+                    </div>
                 </div>
             </div>
         </div>
@@ -256,37 +271,6 @@
     </footer>
 
     <script>
-        function handlePostSubmit(e) {
-            e.preventDefault();
-            const author = document.getElementById('post-author').value;
-            const text = document.getElementById('post-text').value;
-            const imageInput = document.getElementById('post-image');
-            
-            const postCard = document.createElement('div');
-            postCard.className = "bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3";
-            
-            let imgHTML = '';
-            if (imageInput.files && imageInput.files[0]) {
-                const imgURL = URL.createObjectURL(imageInput.files[0]);
-                imgHTML = `<img src="${imgURL}" class="w-full h-64 object-cover rounded-xl">`;
-            }
-
-            postCard.innerHTML = `
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-riviera-coral text-white rounded-full flex items-center justify-center font-bold">${author.charAt(0)}</div>
-                    <div>
-                        <p class="font-bold text-slate-900 leading-tight">${author}</p>
-                        <p class="text-xs text-slate-500">Just now</p>
-                    </div>
-                </div>
-                <p class="text-slate-700 text-sm">${text}</p>
-                ${imgHTML}
-            `;
-
-            document.getElementById('posts-container').prepend(postCard);
-            document.getElementById('activity-form').reset();
-        }
-
         function handleCommentSubmit(e) {
             e.preventDefault();
             const author = document.getElementById('comment-author').value;
